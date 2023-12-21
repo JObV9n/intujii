@@ -1,0 +1,28 @@
+{
+  "name": "q1",
+  "version": "1.0.0",
+  "description": "Blog API",
+  "main": "index.js",
+  "scripts": {
+    "service": "nodemon index.js",
+    "form":"prettier --write \"index.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JObV9n/intujii.git"
+  },
+  "author": "Sachin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JObV9n/intujii/issues"
+  },
+  "homepage": "https://github.com/JObV9n/intujii#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "prettier": "^3.1.1"
+  }
+}
