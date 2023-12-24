@@ -2,7 +2,7 @@
 const express = require("express");
 const app = express();
 
-const file = require("file/promises");
+const file = require('fs/promises');
 const port = 3000;
 
 app.use(express.json());
@@ -130,7 +130,27 @@ app.put("/api/blogs/:id", (req, res, next) => {
   }
 });
 
+//route to delete the blog using id
+app.delete('/api/blogs/:id', (req, res) => {
+  const blog= req.body;
+  res.send(`Got a DELETE request at "${blog.title}"`)
+
+  const blogId = parseInt(req.params.id);
+
+  // Filter out the user with the specified ID
+  blogs= blogs.filter(user => user.id !== blogId);
+
+  // Check if any user was removed
+  if (blogs.length < blogs.length + 1) {
+    res.status(204).send(); // 204 No Content - successful deletion
+  } else {
+    res.status(404).json({ error: 'User not found' });
+  }
+})
+
 // Start the server
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
+
+

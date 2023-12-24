@@ -46,5 +46,17 @@
     "title": "SuperHero",
     "description": "Blog on SuperHero",
     "category": "Comic"
+  },
+  {
+    "id": 9,
+    "title": "SuperHero Franchise in the world",
+    "description": "Blog on SuperHero",
+    "category": "Comic"
+  },
+  {
+    "id": 10,
+    "title": "Mane ko Jibani",
+    "description": "Tragedy",
+    "category": "Thriller"
   }
 ]
